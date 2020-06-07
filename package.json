@@ -1,14 +1,16 @@
 {
   "name": "todo",
   "version": "1.0.0",
-  "description": "A simple todo list app built in HTML, CSS and JavaScript.",
+  "description": "A todo list using an API connected to a mySQL database",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "api": "node ./src/index.js --watch"
   },
   "repository": {
     "type": "git",
