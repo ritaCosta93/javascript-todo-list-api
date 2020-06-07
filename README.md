@@ -36,7 +36,7 @@ A todo list using an API connected to a mySQL database.
 
 ### Create an element in the UI to use the requests
 
-`<button onclick="getTasks(item)">List tasks</button>``
+`<button onclick="getTasks(item)">List tasks</button>`
 
 ## License
 
