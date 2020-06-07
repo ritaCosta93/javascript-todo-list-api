@@ -4,7 +4,7 @@ A todo list using an API connected to a mySQL database.
 
 ### Create a connection to mySQL using express
 
-´
+`
 const express = require("express");
 const bodyParser = require("body-parser");
 const mysql = require("mysql2");
@@ -17,46 +17,27 @@ user: "root",
 password: "123456789",
 database: "todo",
 });
-´
+`
 
 ### Create a promise to check if your connection is working
 
-´
-try {
-connection.connect();
-} catch (e) {
-console.log("Ooops. Connection to MySQL failed.");
-console.log(e);
-}
-´
+`try { connection.connect(); } catch (e) { console.log("Ooops. Connection to MySQL failed."); console.log(e); }`
 
 ### Set a PORT for your API to work on
 
-´
-//run express and set a port to the api
-const api = express();
-api.listen("3000", () => {
-console.log("API up and running");
-});
-´
+`//run express and set a port to the api const api = express(); api.listen("3000", () => { console.log("API up and running"); });`
 
 ### Set a folder for your API to serve
 
-´
-//set a folder for the api to serve
-api.use(express.static(\_\_dirname + "/public"));
-´
+`//set a folder for the api to serve api.use(express.static(\_\_dirname + "/public"));`
 
 ### Write your API routes
 
-´
-api.post("/tasks/add", (req, res) => {
-});
-´
+`api.post("/tasks/add", (req, res) => { });`
 
 ### Add the SQL commands to your api routes
 
-´connection.query(
+`connection.query(
 "SELECT LAST_INSERT_ID() FROM tasks",
 (error, results) => {
 if (error) return res.json({ error: error });
@@ -67,11 +48,11 @@ if (error) return res.json({ error: error });
           });
         }
       );
-      ´
+      `
 
 ### Create a services file with your requests
 
-´function getTasks(callback) {
+`function getTasks(callback) {
 var req = new XMLHttpRequest();
 req.open("GET", "/tasks");
 req.send();
@@ -83,11 +64,11 @@ if (results.error) return console.log(results.error);
     if (callback) callback(results);
 
 });
-}´
+}`
 
 ### Create an element in the UI to use the requests
 
-´<button onclick="getTasks(item)">List tasks</button>´
+`<button onclick="getTasks(item)">List tasks</button>``
 
 ## License
 
