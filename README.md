@@ -1,4 +1,4 @@
-# To-do
+# JavaScript Todo List API
 
 A todo list using an API connected to a mySQL database.
 
